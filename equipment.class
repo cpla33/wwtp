@@ -1,0 +1,69 @@
+public class Equipment {
+    private boolean InValveState = 0;
+    private boolean CompressorState = 0;
+    private boolean RecyclePumpState = 0;
+    private boolean OutValveState = 0;
+    private boolean PumpOutState = 0;
+    
+    // Для одновременного задания состояний всему оборудованию по одному вызову из основной прогаммы
+    public setEquipmentStates(int stageNumber){
+        switch(stageNumber){
+            case 1:
+                InValveState = 1;
+                CompressorState = 1;
+                RecyclePumpState = 0;
+                OutValveState = 0;
+                PumpOutState = 0;
+            case 2:
+                InValveState = 0;
+                CompressorState = 0;
+                RecyclePumpsState = 1;
+                OutValveState = 0;
+                PumpOutState = 0;
+            case 3:
+                InValveState = 0;
+                CompressorState = 1;
+                RecyclePumpsState = 0;
+                OutValveState = 0;
+                PumpOutState = 0;
+            case 4:
+                InValveState = 0;
+                CompressorState = 0;
+                RecyclePumpsState = 0;
+                OutValveState = 0;
+                PumpOutState = 0;
+            case 5:
+                InValveState = 0;
+                CompressorState = 0;
+                RecyclePumpsState = 0;
+                OutValveState = 1;
+                PumpOutState = 1;
+            default:
+                InValveState = 0;
+                CompressorState = 0;
+                RecyclePumpState = 0;
+                OutValveState = 0;
+                PumpOutState = 0;
+        }
+    }
+    
+    public boolean getInValveState(){
+        return InValveState;
+    }
+
+    public boolean getCompressorState() {
+        return CompressorState;
+    }
+    
+    public boolean getRecyclePumpState() {
+        return CompressorState;
+    }
+
+    public boolean getOutValveState() {
+        return CompressorState;
+    }
+
+    public boolean getPumpOutState() {
+        return CompressorState;
+    }
+}

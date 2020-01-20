@@ -1,0 +1,34 @@
+public class wwtp{
+    public static void main (String[] args){
+        int Hour = 5;
+        
+        //int[] Relay;
+        //Relay = new int[7];
+        //Relay[0] = 55;
+
+
+        SBR TankA = new SBR();
+        SBR TankB = new SBR();
+        TankA.setStage(Hour, true);
+        TankA.setStage(Hour, false);
+
+        Equipment eqA = new Equipment(); 
+        Equipment eqB = new Equipment();
+
+        eqA.setEquipmentStates(TankA.getStageNumber());
+        eqB.setEquipmentStates(TankB.getStageNumber());
+
+        boolean Relay1 = eqA.getInValveState();
+        boolean Relay2 = eqB.getInValveState();
+        boolean Relay3 = eqA.getCompressorState();
+        boolean Relay4 = eqB.getCompressorState();
+        boolean Relay5 = eqA.getRecyclePumpState();
+        boolean Relay6 = eqB.getRecyclePumpState();
+        boolean Relay7 = eqA.getOutValveState;
+        boolean Relay8 = eqB.getOutValveState;
+        boolean Relay9 = eqA.getPumpOutState;
+        boolean Relay10 = eqB.getPumpOutState;
+    }
+
+
+}
