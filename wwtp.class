@@ -1,5 +1,8 @@
-public class wwtp{
+public class wwtp {
     public static void main (String[] args){
+        //что за magic numbers?
+        //если это константа, выноси ее в статическую переменную  
+        //здесь и везде: переменные называют с маленькой буквы и дают понятные названия
         int Hour = 5;
         
         //int[] Relay;
@@ -18,6 +21,7 @@ public class wwtp{
         eqA.setEquipmentStates(TankA.getStageNumber());
         eqB.setEquipmentStates(TankB.getStageNumber());
 
+        //в чем смысл набора пронумерованных переменных? Когда ты начинаешь нумеровать переменные, задумайся, все ли ты делаешь правильно
         boolean Relay1 = eqA.getInValveState();
         boolean Relay2 = eqB.getInValveState();
         boolean Relay3 = eqA.getCompressorState();
