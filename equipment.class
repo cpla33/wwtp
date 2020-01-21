@@ -1,10 +1,12 @@
 public class Equipment {
+    //переменные с маленькой буквы. В отличие от классов
     private boolean InValveState = 0;
     private boolean CompressorState = 0;
     private boolean RecyclePumpState = 0;
     private boolean OutValveState = 0;
     private boolean PumpOutState = 0;
     
+    // все эти magic numbers должны храниться не в коде
     // Для одновременного задания состояний всему оборудованию по одному вызову из основной прогаммы
     public setEquipmentStates(int stageNumber){
         switch(stageNumber){
